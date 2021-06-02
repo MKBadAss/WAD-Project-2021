@@ -12,10 +12,18 @@
         <div class="loginbox-interface">
             <div class="loginbox-form-box">
                 <div class="loginbox-button-box" >
-                    <div id="loginbox-button"></div>
+                    <div id="loginbox-button">
+                    </div>
+                    <div class="loginbox-loginbutton">
+                        <button type="button" class="loginbox-toggle-btn" onclick="login()">LOGIN</button>
+                    </div>
+                    <div class="loginbox-signupbutton">
+                        <button type="button" class="loginbox-toggle-btn" onclick="signup()">SIGN UP</button>
+                    </div>
+                    <!--
                     <button type="button" class="loginbox-toggle-btn" onclick="login()">LOGIN</button>
-                    <button type="button" class="loginbox-toggle-btn" onclick="signup()">SIGN UP</button>
-                    
+                    <button type="button" class="loginbox-toggle-btn" onclick="signup()">SIGN UP</button> -->
+                  
                 </div>
                 <div class="loginbox-social-icon">
                     <img src="img/facebook-social-media-fb-logo-square-44659.webp">
@@ -25,8 +33,13 @@
                 <form  action="include/login.inc.php" method="post"    id="loginbox-login" class="loginbox-input-group-login" >
                     <input class="loginbox-input-field" type="text" name="userId" id="" placeholder="User ID or Email" required>
                     <input class="loginbox-input-field" type="password" name="password" id="" placeholder="Password" required>
-                    <input type="checkbox" class="loginbox-check-box"> <span>Rember password</span>
+                    <input type="checkbox" class="loginbox-check-box" id="remember-password"> <label for="remember-password" style="cursor: pointer;">Remember password</label>
                     <button name="submitLog" type="submit" class="loginbox-submit-btn">Login</button>
+                    <div class="reset-password">
+                        <a href="">
+                            Forgot your password?
+                        </a>
+                    </div>
                 </form>
 
                 <form  action="include/signup.inc.php" method="post"    id="loginbox-signup" class="loginbox-input-group-signup" >
@@ -40,30 +53,6 @@
                     
                 </form>
 
-                <?php
-                            if(isset($_GET["error"]) ){
-                            if($_GET["error"] == "emptyInput") {
-                                echo "<p>Fill in all field! </p>";
-                            }
-                            elseif ($_GET["error"] == "invalidemail") {
-                                echo "<p> Choose a proper email!</p>";
-                            }
-                            elseif ($_GET["error"] == "passwordsdontmatch") {
-                                echo "<p> Password doesnt match!</p>";
-                            }
-                            elseif ($_GET["error"] == "emailtaken") {
-                                echo "<p> This email already existed!</p>";
-                            }
-                            elseif ($_GET["error"] == "stmtfailed") {
-                                echo "<p> Something went wrong, try again!</p>";
-                            }
-                            elseif ($_GET["error"] == "none") {
-                                echo "<p> You have sign up successfully!</p>";
-                            }
-
-                            }
-
-                ?>
             </div>
             
         </div>

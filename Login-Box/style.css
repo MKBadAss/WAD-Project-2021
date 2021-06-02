@@ -28,6 +28,7 @@
     margin: 12% auto;
     padding: 5px;
     overflow: hidden;
+    border-radius: 15px;
 }
 .loginbox-button-box{
     width: 220px;
@@ -35,9 +36,20 @@
     position: relative;
     box-shadow: 0 0 20px 9px #ff61241f;
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.loginbox-signupbutton{
+    width: 110px;
+
+}
+.loginbox-loginbutton{
+    width: 110px;
+   
 }
 .loginbox-toggle-btn{
-    padding: 10px 30px ;
+    width: 100%;
+    padding: 10px 0px ;
     cursor: pointer;
     background:transparent;
     border: 0;
@@ -66,13 +78,13 @@
     border-radius: 50%;
 }
 .loginbox-input-group-login{
-    top: 150px;
+    top: 125px;
     position: absolute;
     width: 280px;
     transition: .5s;
 }
 .loginbox-input-group-signup{
-    top: 90px;
+    top: 100px;
     position: absolute;
     width: 280px;
     transition: .5s;
@@ -89,7 +101,7 @@
     background: transparent;
 }
 .loginbox-submit-btn{
-    width: 85%;
+    width: 70%;
     padding: 10px 30px;
     cursor: pointer;
     display: block;
@@ -98,9 +110,17 @@
     border: 0;
     outline: none;
     border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.loginbox-submit-btn:hover{
+    opacity: 1;
 }
 .loginbox-check-box{
-    margin: 30px 10px 30px 0;
+    margin: 30px 5px 30px 0px;
+    cursor: pointer;
 }
 .loginbox-check-box span{
     color: #777;
@@ -116,4 +136,14 @@
     left: 450px;
    
 
+}
+
+.reset-password{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.8em;
+    
+}
+.reset-password a{
+    color:black;
 }
